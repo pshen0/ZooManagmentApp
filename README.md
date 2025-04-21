@@ -1,5 +1,4 @@
 # ZooManagmentApp
-=
 
 Реализация функциональности
 =
@@ -38,7 +37,7 @@ POST: добавить новое расписание
 
 Архитектура проекта
 =
-Использованная структура по Clean Architecture:
+
 Domain Layer
 -
 Animal, Enclosure, FeedingSchedule, AnimalMovedEvent, FeedingEvent
@@ -76,8 +75,8 @@ Domain-Driven Design
 
 Принципы SOLID
 =
-Single Responsibility - Каждый класс отвечает только за одну задачу (например, FeedingOrganizationService — только за кормление)
-Open/Closed - Через интерфейсы можно внедрить новые реализации репозиториев
-Liskov Substitution - Все репозитории следуют контракту и могут быть заменены
-Interface Segregation - Интерфейсы не перегружены, узконаправленные
-Dependency Inversion - Сервисы и контроллеры зависят от абстракций, а не от конкретных классов
+* Single Responsibility - Каждый класс отвечает только за одну задачу (например, FeedingOrganizationService — только за кормление)
+* Open/Closed - Через интерфейсы можно внедрить новые реализации репозиториев
+* Liskov Substitution - Все репозитории следуют контракту и могут быть заменены
+* Interface Segregation - Интерфейсы не перегружены, узконаправленные
+* Dependency Inversion - Сервисы и контроллеры зависят от абстракций, а не от конкретных классов
