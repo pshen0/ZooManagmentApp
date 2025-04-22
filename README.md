@@ -9,55 +9,55 @@ GET: получить всех животных
 POST: добавить животное  
 DELETE: удалить животное по ID  
 
-Контроллер вольеров EnclosureViewController (api/enclosures):
-GET: получить все вольеры
-POST: добавить вольер
-DELETE: удалить вольер по ID
+Контроллер вольеров EnclosureViewController (api/enclosures):  
+GET: получить все вольеры  
+POST: добавить вольер  
+DELETE: удалить вольер по ID  
 
-Контроллер расписания кормления FeedingScheduleViewController (api/feedings):
-GET: получить все расписания кормления
-POST: добавить новое расписание
+Контроллер расписания кормления FeedingScheduleViewController (api/feedings):  
+GET: получить все расписания кормления  
+POST: добавить новое расписание  
 
-2. Тестирование через Swagger
-Через интерфейс Swagger были протестированы следующие сценарии:
+2. Тестирование через Swagger  
+Через интерфейс Swagger были протестированы следующие сценарии:  
 
-Добавление сущностей:
-Животное (POST /api/animals)
-Вольер (POST /api/enclosures)
-Расписание кормления (POST /api/feedings)
+Добавление сущностей:  
+Животное (POST /api/animals)  
+Вольер (POST /api/enclosures)  
+Расписание кормления (POST /api/feedings)  
 
-Получение информации:
-О животных (GET /api/animals)
-О вольерах (GET /api/enclosures)
-О расписаниях кормления (GET /api/feedings)
+Получение информации:  
+О животных (GET /api/animals)  
+О вольерах (GET /api/enclosures)  
+О расписаниях кормления (GET /api/feedings)  
 
-Выполнение операций:
-Кормление реализовано через FeedingOrganizationService
-Перемещение реализовано через AnimalTransferService
+Выполнение операций:  
+Кормление реализовано через FeedingOrganizationService  
+Перемещение реализовано через AnimalTransferService  
 
 Архитектура проекта
 =
 
 Domain Layer
 -
-Animal, Enclosure, FeedingSchedule, AnimalMovedEvent, FeedingEvent
-Расположено в: ZooManagmentApp.Domain
+Animal, Enclosure, FeedingSchedule, AnimalMovedEvent, FeedingEvent  
+Расположено в: ZooManagmentApp.Domain  
 
 Application Layer
 -
-Интерфейсы репозиториев: IAnimalRepository, IEnclosureRepository, IFeedingScheduleRepository
-Сервисы: AnimalTransferService, FeedingOrganizationService, ZooStatisticsService
-Расположено в: ZooManagmentApp.Application
+Интерфейсы репозиториев: IAnimalRepository, IEnclosureRepository, IFeedingScheduleRepository  
+Сервисы: AnimalTransferService, FeedingOrganizationService, ZooStatisticsService  
+Расположено в: ZooManagmentApp.Application  
 
 Infrastructure Layer
 -
-Реализации репозиториев в памяти: InMemoryAnimalRepository, InMemoryEnclosureRepository, InMemoryFeedingScheduleRepository
-Расположено в: ZooManagmentApp.Infrastructure
+Реализации репозиториев в памяти: InMemoryAnimalRepository, InMemoryEnclosureRepository, InMemoryFeedingScheduleRepository  
+Расположено в: ZooManagmentApp.Infrastructure  
 
 Presentation Layer
 -
-Контроллеры API: AnimalsViewController, EnclosureViewController, FeedingScheduleViewController
-Расположено в: ZooManagmentApp.Presentation
+Контроллеры API: AnimalsViewController, EnclosureViewController, FeedingScheduleViewController  
+Расположено в: ZooManagmentApp.Presentation  
 
 Domain-Driven Design
 =
@@ -71,7 +71,7 @@ Domain-Driven Design
 
 Хранилище данных
 =
-Данные хранятся в памяти (in-memory) через классы InMemoryAnimalRepository, InMemoryEnclosureRepository, InMemoryFeedingScheduleRepository, что соответствует требованию
+Данные хранятся в памяти (in-memory) через классы:   InMemoryAnimalRepository, InMemoryEnclosureRepository, InMemoryFeedingScheduleRepository, что соответствует требованию
 
 Принципы SOLID
 =
